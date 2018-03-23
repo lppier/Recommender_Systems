@@ -1,5 +1,11 @@
 # Exploration of Recommender Systems Using Surprise Python Package
 
+**Nearest Neighbours of Item - nearest_neighbours.py**
+
+This code demonstrates how to get the 10 most related items (nearest neighbours) to the movie item "Clockwork Orange". 
+Uses item-item approach.
+
+
 **User and Item based collaborative filtering - collaborative_filtering_exploration.py**
 
 This code demonstrates how collaborative filtering for user-based and item-based methods can be done

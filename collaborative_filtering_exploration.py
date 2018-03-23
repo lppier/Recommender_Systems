@@ -11,7 +11,7 @@ data = Dataset.load_builtin('ml-100k')
 trainset, testset = train_test_split(data, test_size=.15)
 
 # Use user_based true/false to switch between user-based or item-based collaborative filtering
-algo = KNNWithMeans(k=50, sim_options={'user_based': True})
+algo = KNNWithMeans(k=50, sim_options={'name': 'pearson_baseline', 'user_based': True})
 algo.fit(trainset)
 
 # we can now query for specific predicions
@@ -34,7 +34,7 @@ train_pred = algo.test(trainset.build_testset())
 accuracy.rmse(train_pred)
 
 # Use user_based true/false to switch between user-based or item-based collaborative filtering
-algo = KNNWithMeans(k=50, sim_options={'user_based': False})
+algo = KNNWithMeans(k=50, sim_options={'name': 'pearson_baseline', 'user_based': False})
 algo.fit(trainset)
 
 # run the trained model against the testset
