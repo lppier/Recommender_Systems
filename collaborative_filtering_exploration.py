@@ -67,13 +67,3 @@ algo.fit(trainset)
 test_pred = algo.test(testset)
 print("Item-based Model : Test Set")
 accuracy.rmse(test_pred, verbose=True)
-#
-# param_grid = {'k': [10, 20],
-#               'sim_options': {'name': ['msd', 'cosine'],
-#                               'min_support': [1, 5],
-#                               'user_based': [False]}
-#               }
-
-# from surprise.model_selection import GridSearchCV
-# gs = GridSearchCV(SVD, param_grid, measures=['rmse', 'mae'], cv=3)
-# gs.fit(data)

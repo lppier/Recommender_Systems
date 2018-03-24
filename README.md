@@ -32,5 +32,14 @@ https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf
 
 **Grid Search on KNNMeans Algorithm - grid_search.py**
 
-An extensive grid search to find the best hyper-parameters for KNNMeans on this dataset. 
+An extensive grid search to find the best hyper-parameters for KNNMeans on this dataset. **Warning**: Takes a long time!
 
+Results:
+````
+{'k': 35, 'bsl_options': {'n_epochs': 1, 'reg_i': 40, 'method': 'als', 'reg_u': 25}, 'sim_options': {'user_based': False, 'name': 'pearson_baseline'}}
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Item-based Model : Test Set
+RMSE: 0.9129
+````
