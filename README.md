@@ -1,11 +1,29 @@
-# Exploration of Recommender Systems (Using Surprise Python Package)
+# Exploration of Recommender Systems
 
-## Nearest Neighbours - Top Recommendations
+**Recommender Systems**
+
+Recommender systems are useful for recommending users items based on their past preferences. Broadly, 
+recommender systems can be split into content-based and collaborative-filtering types. 
+Such recommender systems are predictive in nature. For example, we predict what the user might want to buy next.
+Here, we use the Surprise python package. http://surpriselib.com/
+
+Example: Amazon - "You May Also Like"
+
+**Association Mining**
+
+Also, we will delve a bit into association mining, which is a form of descriptive analytics. 
+This can be used to develop marketing strategies like cross-selling or up-selling.
+Here, we use the mlxtend python package. https://github.com/rasbt/mlxtend
+
+Example: Amazon - "Frequently Bought Together"
+
+
+## Content-based : Nearest Neighbours - Top Recommendations
 
 **Nearest Neighbours of Item - nearest_neighbours.py**
 
 This code demonstrates how to get the 10 most related items (nearest neighbours) to the movie item "Clockwork Orange". 
-Uses item-item approach.
+
     
 ## User and Item Based Collaborative Filtering
 
@@ -36,6 +54,8 @@ An extensive grid search to find the best hyper-parameters for KNNMeans on this 
 
 Results:
 ````
+Grid Search Results: 
+
 0.931737661568928
 {'k': 40, 'bsl_options': {'n_epochs': 1, 'reg_i': 40, 'method': 'als', 'reg_u': 25}, 'sim_options': {'user_based': False, 'name': 'pearson_baseline'}}
 
@@ -69,12 +89,14 @@ Fit time          1.04    1.11    1.03    1.01    0.90    1.02    0.07
 Test time         2.08    2.06    2.06    2.05    2.06    2.06    0.01    
 {'test_mae': array([0.71909501, 0.71579784, 0.71384567, 0.71656901, 0.72541331]), 'fit_time': (1.0419056415557861, 1.1055827140808105, 1.0349535942077637, 1.01346755027771, 0.9016950130462646), 'test_rmse': array([0.91726677, 0.91622589, 0.91245293, 0.91793969, 0.92711428]), 'test_time': (2.0783369541168213, 2.0616250038146973, 2.0627968311309814, 2.049354314804077, 2.058506727218628)}
 
-Item-based Model : Test Set
+SVD : Test Set
 RMSE: 0.9000
 ````
 
 For SVD++ (Before running : Be warned it is much slower than SVD)
 ````
+Grid Search Results:
+
 0.9167768433405562
 {'n_factors': 40, 'reg_all': 0.1, 'n_epochs': 40, 'lr_all': 0.008}
 
@@ -108,3 +130,15 @@ https://github.com/srendle/libfm
 
 xLearn - supports out-of-core training, fast, has Python and R APIs
 https://github.com/aksnzhy/xlearn
+
+## Association Mining
+
+**Association Mining : association_mining.py**
+
+Demonstrates how to get frequent items and association rules using the mlxtend package. 
+
+![alt text](./rules.png)
+
+One finding is this:
+
+Jumbo Storage Bag Suki is usually bought together with Jumbo Bag Red Retrospot. 
