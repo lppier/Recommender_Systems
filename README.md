@@ -142,3 +142,5 @@ Demonstrates how to get frequent items and association rules using the mlxtend p
 One finding is this:
 
 Jumbo Storage Bag Suki is usually bought together with Jumbo Bag Red Retrospot. 
+
+Association Mining from another repo : https://github.com/lppier/League_Of_Legends_Data_Analytics/blob/master/AssociationAnalysis.Rmd
