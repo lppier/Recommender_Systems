@@ -1,4 +1,5 @@
 # Exploration of Recommender Systems
+Blog post: https://kerpanic.wordpress.com/2018/03/26/a-gentle-guide-to-recommender-systems-with-surprise/
 
 **Recommender Systems**
 
